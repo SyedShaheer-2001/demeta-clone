@@ -11,7 +11,29 @@ const Footer = () => {
         <>
             <div className="w-full bg-black flex justify-center items-center py-10">
                 <div className="w-[90%] max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-12">
+<div className='md:col-span-3 text-white grid md:grid-cols-3 gap-10'>
+                         
+                         <div className=''>
+                            <h6 className='text-[#7fed71] tracking-[1px] text-sm mt-2 text-[16px] exo capitalize flex gap-[6px] items-center w-full'>
+                                <Image src={'/flags/1.svg'} width={25} height={20} alt=''/>
+                                Istanbul Office</h6>
+                             <p className="text-zinc-100 tracking-[1px] text-sm mt-2 text-[16px] exo capitalize">Office 269, Building R2, Brandium,<br/> Ateashir, Istanbul, Turkey.</p>
+                         </div>
 
+                          <div className='md:text-center md:flex flex-col items-center'>
+                            <h6 className='text-[#7fed71] tracking-[1px] text-sm mt-2 text-[16px] exo capitalize flex gap-[6px] items-center mx-auto'>
+                                <Image src={'/flags/2.png'} width={25} height={20} alt=''/>
+                                Abu dhabi Office</h6>
+                             <p className="text-zinc-100 tracking-[1px] text-sm mt-2 text-[16px] exo capitalize">VD-First floor incubator<br/> building masdar city,abu dhabi, United Arab Emirates</p>
+                         </div>
+
+                          <div className='md:text-end md:flex flex-col items-end'>
+                            <h6 className='text-[#7fed71] tracking-[1px] text-sm mt-2 text-[16px] exo capitalize flex gap-[6px] items-center '>
+                                <Image src={'/flags/3.png'} width={25} height={20} alt=''/>
+                                USA Office</h6>
+                             <p className="text-zinc-100 tracking-[1px] text-sm mt-2 text-[16px] exo capitalize">1900 Camden Avenue suite 101<br/> san jose, CA 95124</p>
+                         </div>
+                    </div>
                     <div className="flex flex-col gap-3 items-start">
                         <Image alt="logo" src={logo} className="h-[120px] md:h-[150px] w-auto" />
                         <p className="poppins text-sm leading-[20px] text-zinc-300">
@@ -57,31 +79,7 @@ const Footer = () => {
                     </div>
 
 
-                    <div className='md:col-span-3 text-white grid md:grid-cols-3 gap-10'>
-                             <h1 className="text-zinc-100 text-[18px] md:text-[20px] font-extrabold md:col-span-3 md:text-center">
-                            Visit Us
-                        </h1>
-                         <div className=''>
-                            <h6 className='text-[#7fed71] tracking-[1px] text-sm mt-2 text-[16px] exo capitalize flex gap-[6px] items-center w-full'>
-                                <Image src={'/flags/1.svg'} width={25} height={20}/>
-                                Istanbul Office</h6>
-                             <p className="text-zinc-100 tracking-[1px] text-sm mt-2 text-[16px] exo capitalize">Office 269, Building R2, Brandium,<br/> Ateashir, Istanbul, Turkey.</p>
-                         </div>
-
-                          <div className='md:text-center md:flex flex-col items-center'>
-                            <h6 className='text-[#7fed71] tracking-[1px] text-sm mt-2 text-[16px] exo capitalize flex gap-[6px] items-center mx-auto'>
-                                <Image src={'/flags/2.png'} width={25} height={20}/>
-                                Abu dhabi Office</h6>
-                             <p className="text-zinc-100 tracking-[1px] text-sm mt-2 text-[16px] exo capitalize">VD-First floor incubator<br/> building masdar city,abu dhabi, United Arab Emirates</p>
-                         </div>
-
-                          <div className='md:text-end md:flex flex-col items-end'>
-                            <h6 className='text-[#7fed71] tracking-[1px] text-sm mt-2 text-[16px] exo capitalize flex gap-[6px] items-center '>
-                                <Image src={'/flags/3.png'} width={25} height={20}/>
-                                USA Office</h6>
-                             <p className="text-zinc-100 tracking-[1px] text-sm mt-2 text-[16px] exo capitalize">1900 Camden Avenue suite 101<br/> san jose, CA 95124</p>
-                         </div>
-                    </div>
+                    
 
                 </div>
             </div>

@@ -35,16 +35,16 @@ const Partners = () => {
         <h2 className="text-[32px] font tracking-[3.2px] capitalize text-center ">Our Showcase Partners</h2>
       </div> 
         
-        <div className="px-5 relative grid  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-[30px] items-end">
+        <div className="px-5 max-w-[1600px] relative grid  grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-[30px] items-end partnerGrid ">
         {/* Custom navigation buttons */}
-        <div className="absolute top-1/2 left-[25px]  z-10 transform -translate-y-1/2 cursor-pointer" ref={prevRef}>
+        <div className="absolute top-1/2 left-[25px]  z-10 transform -translate-y-1/2 cursor-pointer swiperIcons" ref={prevRef}>
           <ChevronLeft color='#ededede6' size={32}/>
         </div>
-        <div className="absolute top-1/2 right-[25px] z-10 transform -translate-y-1/2 cursor-pointer" ref={nextRef}>
+        <div className="absolute top-1/2 right-[25px] z-10 transform -translate-y-1/2 cursor-pointer swiperIcons" ref={nextRef}>
          <ChevronRight color='#ededede6' size={32}/>
         </div>
 
-           <div className=' h-[200px] w-[110%] relative hidden sm:block'>
+           <div className=' h-[200px] w-[110%] relative forbes'>
             <Link href={'https://www.forbes.com/sites/kolawolesamueladebayo/2025/06/27/how-ai-could-reshape-global-education---and-what-comes-after/'} target='_blank'>
           <Image src="/partners/forbes.png" fill alt="" className='object-contain'/>
             </Link>
@@ -52,29 +52,32 @@ const Partners = () => {
            </div>
         <Swiper
           slidesPerView={1}
-            spaceBetween={30}
+            spaceBetween={0}
             breakpoints={{
               500:{
-slidesPerView: 1.5,
-            spaceBetween: 30,
+              slidesPerView:1.5,
+              spaceBetween:40
               },
-              600: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-          768: {
-            slidesPerView: 5,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 50,
-          },
-        }}
+              600:{
+                slidesPerView:2
+              },
+               640:{
+             slidesPerView: 3,
+               },
+               940:{
+                 slidesPerView: 4,
+                 spaceBetween:50
+                },
+                1400:{
+              slidesPerView: 5,
+                },
+            }}
+
+    
             loop={true}
             pagination={{clickable:true}}
             autoplay={{
-              delay: 2500,
+              delay: 500000000,
               disableOnInteraction: false,
             }}
             navigation={{
@@ -87,12 +90,12 @@ slidesPerView: 1.5,
               swiper.params.navigation.nextEl = nextRef.current;
             }}
             modules={[Pagination,Autoplay, Navigation]}
-          className="mySwiper max-w-[1300px] mx-auto sm:col-span-2  md:col-span-3 lg:col-span-4 xl:col-span-5"
+          className="mySwiper  mx-auto max-w-[100%] sm:col-span-2  md:col-span-3 lg:col-span-4 xl:col-span-5"
         >
           {data.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="w-full h-[170px] relative rounded-3xl overflow-hidden">
-                <img src={item.img} alt={`Gallery image ${index + 1}`} className="w-[90%] h-[90%] m-auto object-contain" />
+              <div className="w-full h-[130px] sm:h-[200px] relative rounded-3xl overflow-hidden">
+                <img src={item.img} alt={`Gallery image ${index + 1}`} className="w-[100%] h-[100%] m-auto object-contain" />
               </div>
             </SwiperSlide>
           ))}

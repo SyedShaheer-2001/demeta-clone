@@ -197,39 +197,39 @@ button.group:hover {
   background-repeat: no-repeat;
 }
 
- #check {
-    width: 20px;
-    height: 20px;
-    background-color: #d1d5db; 
-    border: none;
-    appearance: none;
-    position: relative;
-    cursor: pointer;
-    border-radius: 4px;
-  }
+#check {
+  width: 20px;
+  height: 20px;
+  background-color: #d1d5db; 
+  border: none;
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
-  #check:checked::after {
-    content: '✔';
-    color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#check:checked::after {
+  content: '✔';
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
     font-size: 16px;
   }
 
-
+  
   .clip{
     clip-path: polygon(0px 0px, 0px 72px, 5px 68px, 5px 5px, 296px 5px, 296px 68px, 0px 68px, 0 72px, 300px 72px, 300px 0)
   }
-
-.gradient{
-  background: #ffffff;
-background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%,  rgba(57, 255, 20, 1) 30%, rgba(57, 255, 20, 1) 100%);
+  
+  .gradient{
+    background: #ffffff;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%,  rgba(57, 255, 20, 1) 30%, rgba(57, 255, 20, 1) 100%);
 }
 .gradient2{
   background: #000;
-background: linear-gradient(180deg,rgba(0, 0, 0, 1) 40%,  rgba(57, 255, 20, 1) 100%);
+  background: linear-gradient(180deg,rgba(0, 0, 0, 1) 40%,  rgba(57, 255, 20, 1) 100%);
 }
 
 .bounce {
@@ -254,3 +254,21 @@ background: linear-gradient(180deg,rgba(0, 0, 0, 1) 40%,  rgba(57, 255, 20, 1) 1
   }
 }
 
+
+@media only screen and (max-width: 640px) {
+    .partnerGrid{
+       display: flex;
+       align-self: center;
+    }
+
+    .forbes{
+      display: block;
+      max-height: 140px !important;
+      min-width: 140px;
+    }
+ 
+     .swiperIcons{
+      display: none;
+     }
+
+}
