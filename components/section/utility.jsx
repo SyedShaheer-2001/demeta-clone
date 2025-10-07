@@ -1,7 +1,16 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import { TextAnimate } from '../ui/text-animate'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Utility = () => {
+
+         useEffect(() => {
+        AOS.init({
+          duration: 1000 // Duration in milliseconds
+        });
+      }, []);
 
      const data = [
         {title:'Da1ilmverse (Education)', desc:'Provides access to virtual classrooms, learning hubs, NFT certifications, and knowledge exchanges, with rewards for progress and achievement.'},
@@ -26,7 +35,7 @@ const Utility = () => {
                     {
                         data.map((res,index)=>{
                             return(
-                                <div className='flex flex-col gap-3 items-center flex-1 min-w-[190px]' key={index}>
+                                <div className='flex flex-col gap-3 items-center flex-1 min-w-[190px]' key={index}  data-aos={'fade-up'} >
                                     <h6 className='text-[20px] tracking-[1.1px] text-center font-semibold  text-[#7fed71]'>{res.title}</h6>
                                     <p className='text-[16px] tracking-[1.1px] text-center font-light leading-nomal  poppins'>{res.desc}</p>
                                 </div>
