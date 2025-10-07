@@ -53,7 +53,14 @@ const BoardMembers = () => {
             img: "/boardMembers/img7.png",
             desc: "A collaborative leader focused on forging high-value partnerships and efficient processes that fuel DaMeta1's sustainable growth and mission fulfillment.",
             href: "#"
-        }
+        },
+        {
+            name: "Georgette A.",
+            role: "LEGAL ADVISOR",
+            img: "/boardMembers/img8.png",
+            desc: "Georgette Adonis-Roberts is a dual-qualified international lawyer and UK barrister with deep expertise in corporate and commercial law, fintech, virtual assets, and regulatory compliance. With over a decade of experience, she has advised startups, institutional investors, and global firms on complex cross-border legal matters, governance, and emerging technologies like Web3 and NFTs.",
+            href: "https://www.linkedin.com/in/georgetteadonis"
+        },
     ]
 
     return (

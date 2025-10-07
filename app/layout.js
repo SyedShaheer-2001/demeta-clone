@@ -29,6 +29,7 @@ const exo = Exo({
           <title>
             DaMeta1 | The Future of AI-Powered Immersive Digital World
           </title>
+          <link rel="canonical" href="https://dmu.dameta1.com/" />
         </head>
         <body
           className={`${orbitron.variable} ${manrope.variable} ${exo.variable}  antialiased`}

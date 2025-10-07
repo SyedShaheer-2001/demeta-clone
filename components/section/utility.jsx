@@ -18,9 +18,7 @@ const Utility = () => {
                 DaMeta1 Utility Token
             </TextAnimate>
             <p className='text-[18px] tracking-[1.1px] text-center font-light my-5 max-w-[1000px] mx-auto poppins' style={{ wordSpacing: "4px" }}>
-                DaMeta1 is a next generation ecosystem built for those who dare to evolve.  From entrepreneurs and educators to gamers and innovators,
-
-                 DaMeta1 delivers cutting-edge, immersive experiences that transform how we engage, learn, create, and collaborate.
+                The DMU Utility Token powers DaMeta1, driving every interaction on its five continents:
                  </p>
                  
 
@@ -28,7 +26,7 @@ const Utility = () => {
                     {
                         data.map((res,index)=>{
                             return(
-                                <div className='flex flex-col gap-3 items-center flex-1 min-w-[190px]'>
+                                <div className='flex flex-col gap-3 items-center flex-1 min-w-[190px]' key={index}>
                                     <h6 className='text-[20px] tracking-[1.1px] text-center font-semibold  text-[#7fed71]'>{res.title}</h6>
                                     <p className='text-[16px] tracking-[1.1px] text-center font-light leading-nomal  poppins'>{res.desc}</p>
                                 </div>
