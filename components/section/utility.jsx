@@ -13,11 +13,11 @@ const Utility = () => {
       }, []);
 
      const data = [
-        {title:'Da1ilmverse (Education)', desc:'Provides access to virtual classrooms, learning hubs, NFT certifications, and knowledge exchanges, with rewards for progress and achievement.'},
-        {title:'Business Bay (Business)', desc:'Drives secure transactions, smart contracts, and ownership of virtual properties, enterprises, and marketplaces.'},
-        {title:'Gameaholic (Gaming)', desc:'Is used as in-game currency for upgrades, tournaments, rewards, and player-to-player trades without fees.'},
-        {title:'Dope (Entertainment)', desc:'Provides access to immersive concerts, events, movies, and interactive entertainment experiences.'},
-        {title:'Eureka (Creators & Innovators)', desc:'Powers creator tools, content publishing, AI spaces, and new project development throughout the ecosystem.'}
+        {title:'Da1ilmverse Education', desc:'Provides access to virtual classrooms, learning hubs, NFT certifications, and knowledge exchanges, with rewards for progress and achievement.'},
+        {title:'Business Bay Business', desc:'Drives secure transactions, smart contracts, and ownership of virtual properties, enterprises, and marketplaces.'},
+        {title:'Gameaholic Gaming', desc:'Is used as in-game currency for upgrades, tournaments, rewards, and player-to-player trades without fees.'},
+        {title:'Dope Entertainment', desc:'Provides access to immersive concerts, events, movies, and interactive entertainment experiences.'},
+        {title:'Eureka Creators & Innovators', desc:'Powers creator tools, content publishing, AI spaces, and new project development throughout the ecosystem.'}
      ]
 
     return (
@@ -31,13 +31,13 @@ const Utility = () => {
                  </p>
                  
 
-                 <div className='flex flex-wrap justify-between gap-10 max-w-[1400px] mx-auto my-20'>
+                 <div className='flex flex-wrap justify-center gap-10 max-w-[1400px] mx-auto my-20 utility'>
                     {
                         data.map((res,index)=>{
                             return(
                                 <div className='flex flex-col gap-3 items-center flex-1 min-w-[190px]' key={index}  data-aos={'fade-up'} >
                                     <h6 className='text-[20px] tracking-[1.1px] text-center font-semibold  text-[#7fed71]'>{res.title}</h6>
-                                    <p className='text-[16px] tracking-[1.1px] text-center font-light leading-nomal  poppins'>{res.desc}</p>
+                                    <p className='text-[16px] tracking-[1.1px] text-center font-light leading-nomal  poppins '>{res.desc}</p>
                                 </div>
                             )
                         })
@@ -53,3 +53,17 @@ const Utility = () => {
 }
 
 export default Utility
+
+
+{/* <div className='flex flex-wrap justify-between gap-10 max-w-[1400px] mx-auto my-20'>
+                    {
+                        data.map((res,index)=>{
+                            return(
+                                <div className='flex flex-col gap-3 items-center flex-1 min-w-[190px]' key={index}  data-aos={'fade-up'} >
+                                    <h6 className='text-[20px] tracking-[1.1px] text-center font-semibold  text-[#7fed71]'>{res.title}</h6>
+                                    <p className='text-[16px] tracking-[1.1px] text-center font-light leading-nomal  poppins'>{res.desc}</p>
+                                </div>
+                            )
+                        })
+                    }
+                 </div> */}

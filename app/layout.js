@@ -29,6 +29,7 @@ const exo = Exo({
           <title>
             DaMeta1 | The Future of AI-Powered Immersive Digital World
           </title>
+          <meta name="description" content="Dive into DaMeta1's immersive digital worlds - education, gaming, entertainment and business. Discover endless opportunities and connect globally."></meta>
           <link rel="canonical" href="https://dmu.dameta1.com/" />
         </head>
         <body

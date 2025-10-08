@@ -272,3 +272,93 @@ button.group:hover {
      }
 
 }
+/* 
+.utility{
+  height: 260px;
+  border-radius: 4px;
+  background: #212121;
+  display: flex;
+  gap: 5px;
+  padding: .4em;
+}
+
+
+
+.utility div {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .5s;
+  background: #212121;
+  border: 1px solid #ff5a91;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-90deg) !important;
+  transition: all .5s ease-in-out;
+}
+
+.utility div:hover {
+  flex: 4;
+  transition: all .5s ease-in-out;
+  transform: rotate(0) !important;
+} */
+
+.utility{
+  border-radius: 4px;
+  display: flex;
+  gap: 5px;
+  padding: .4em;
+}
+
+.utility div {
+  min-height: 300px;
+  max-width: 250px;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .5s;
+  /* border: 1px solid #7fed71; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease-in-out;
+}
+
+.utility div:hover {
+  flex: 4;
+  max-width: none;
+
+}
+
+.utility div h6 {
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all .5s ease-in-out;
+  text-transform: uppercase;
+  color: #7fed71;
+  letter-spacing: .1em;
+}
+
+.utility div p{
+  width: 0px !important;
+  height: 0px !important;
+  opacity: 0;
+}
+
+.utility div:hover h6,.utility div:hover p {
+  transition: all .5s ease-in-out;
+  transform: rotate(0);
+}
+
+.utility div:hover p{
+  width: fit-content !important;
+  height: fit-content !important;
+  opacity: 1;
+}

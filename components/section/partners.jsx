@@ -77,7 +77,7 @@ const Partners = () => {
             loop={true}
             pagination={{clickable:true}}
             autoplay={{
-              delay: 500000000,
+              delay: 2500,
               disableOnInteraction: false,
             }}
             navigation={{
