@@ -28,7 +28,7 @@ const Utility = () => {
                 DaMeta1 Utility Token
             </TextAnimate>
             <p className='text-[18px] tracking-[1.1px] text-center font-light my-5 max-w-[1000px] mx-auto poppins' style={{ wordSpacing: "4px" }}>
-                The DMU Utility Token powers DaMeta1, driving every interaction on its five continents:
+                DaMeta1 Utility Token (DMU) powers DaMeta1, driving every interaction on its five continents
                  </p>
                  
 
