@@ -13,11 +13,11 @@ const Utility = () => {
       }, []);
 
      const data = [
-        {title:'Da1ilmverse Education', desc:'Provides access to virtual classrooms, learning hubs, NFT certifications, and knowledge exchanges, with rewards for progress and achievement.'},
-        {title:'Business Bay Business', desc:'Drives secure transactions, smart contracts, and ownership of virtual properties, enterprises, and marketplaces.'},
-        {title:'Gameaholic Gaming', desc:'Is used as in-game currency for upgrades, tournaments, rewards, and player-to-player trades without fees.'},
-        {title:'Dope Entertainment', desc:'Provides access to immersive concerts, events, movies, and interactive entertainment experiences.'},
-        {title:'Eureka Creators & Innovators', desc:'Powers creator tools, content publishing, AI spaces, and new project development throughout the ecosystem.'}
+        {title:'Da1ilmverse', desc:'Provides access to virtual classrooms, learning hubs, NFT certifications, and knowledge exchanges, with rewards for progress and achievement.'},
+        {title:'Business Bay', desc:'Drives secure transactions, smart contracts, and ownership of virtual properties, enterprises, and marketplaces.'},
+        {title:'Gameaholic', desc:'Is used as in-game currency for upgrades, tournaments, rewards, and player-to-player trades without fees.'},
+        {title:'Dope', desc:'Provides access to immersive concerts, events, movies, and interactive entertainment experiences.'},
+        {title:'Eureka', desc:'Powers creator tools, content publishing, AI spaces, and new project development throughout the ecosystem.'}
      ]
 
     return (
