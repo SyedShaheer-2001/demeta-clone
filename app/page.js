@@ -20,6 +20,7 @@ import ContactBook from "@/components/ui/contactBook";
 import HowItWorks from "@/components/section/howItWorks";
 import AlertBox from "@/components/ui/alertbox";
 import Utility from "@/components/section/utility";
+import Utility2 from "@/components/section/utility2";
 
 
 
@@ -42,6 +43,7 @@ export default function Home() {
       <Explore />
       <Why />
       <Utility />
+      {/* <Utility2 /> */}
       <HowItWorks />
       <University />
       <Features />
