@@ -3,8 +3,9 @@ import React, { useEffect } from 'react'
 import { TextAnimate } from '../ui/text-animate'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import useInView from './useInView'; // Importing the custom hook
 
-const Utility2 = () => {
+const Utility = () => {
 
          useEffect(() => {
         AOS.init({
@@ -21,7 +22,7 @@ const Utility2 = () => {
      ]
 
     return (
-        <div className='bg-white px-5 pb-10 '>
+        <div className='bg-white px-5 pb-10 hidden utilityBlock2'>
 
             <TextAnimate animation="slideUp" by="word" duration={0.5} className='text-[36px] sm:text-[48px] tracking-[4px] text-center '>
                 DaMeta1 Utility Token
@@ -34,10 +35,12 @@ const Utility2 = () => {
                  <div className='flex flex-wrap justify-center gap-10 max-w-[1400px] mx-auto my-20 utility2'>
                     {
                         data.map((res,index)=>{
+                            const [ref, isInView] = useInView({ threshold: 0.1 });
                             return(
-                                <div className='flex flex-col gap-3 items-center flex-1 min-w-[190px]' key={index}  >
-                                    <h6 className='text-[20px] tracking-[1.1px] text-center font-semibold  text-[#7fed71]' >{res.title}</h6>
-                                    <p className='text-[16px] tracking-[1.1px] text-center font-light leading-nomal  poppins ' data-aos={'fade-up'} >{res.desc}</p>
+                                <div className={`flex flex-col gap-3 items-center flex-1 min-w-[190px] relative ${isInView ? 'rotate' : ''}`} key={index} >
+                                   <h6 className={`text-[20px] tracking-[1.1px] text-center font-semibold text-[#7fed71] transition-all duration-500 `}>{res.title}</h6>
+                                    <p className='text-[16px] tracking-[1.1px] text-center font-light leading-nomal  poppins ' >{res.desc}</p>
+                                    <span ref={ref} className='absolute bottom-[25%]'></span>
                                 </div>
                             )
                         })
@@ -52,7 +55,7 @@ const Utility2 = () => {
     )
 }
 
-export default Utility2
+export default Utility
 
 
 {/* <div className='flex flex-wrap justify-between gap-10 max-w-[1400px] mx-auto my-20'>

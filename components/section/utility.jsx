@@ -21,7 +21,7 @@ const Utility = () => {
      ]
 
     return (
-        <div className='bg-white px-5 pb-10 '>
+        <div className='bg-white px-5 pb-10 utilityBlock'>
 
             <TextAnimate animation="slideUp" by="word" duration={0.5} className='text-[36px] sm:text-[48px] tracking-[4px] text-center '>
                 DaMeta1 Utility Token

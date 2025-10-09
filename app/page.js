@@ -43,7 +43,7 @@ export default function Home() {
       <Explore />
       <Why />
       <Utility />
-      {/* <Utility2 /> */}
+      <Utility2 />
       <HowItWorks />
       <University />
       <Features />
