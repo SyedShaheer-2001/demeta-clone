@@ -323,7 +323,9 @@ button.group:hover {
   cursor: pointer;
   border-radius: 2px;
   transition: all .5s;
-  /* border: 1px solid #7fed71; */
+  border: 2px solid transparent;
+border-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 30%, rgba(57, 255, 20, 1) 100%);
+  border-image-slice: 1 !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -350,6 +352,7 @@ button.group:hover {
   width: 0px !important;
   height: 0px !important;
   opacity: 0;
+  padding-inline: 5px;
 }
 
 .utility div:hover h6,.utility div:hover p {
