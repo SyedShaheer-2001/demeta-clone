@@ -56,13 +56,13 @@ const Navbar2 = () => {
      </div>
       
        <div className='w-full flex gap-5 text-white h-10'>
-                <Link href={"#"} >
+                <Link href={"https://www.facebook.com/DaMeta1Community"}  target='_blank'>
                 <FaFacebookF className='size-[17px] cursor-pointer hover:text-[#f14f44] transition-all duration-300'/>
                 </Link>
-                <Link href={"#"}>
+                <Link href={"https://x.com/DaMeta1_"} target='_blank'>
                 <FaXTwitter className='size-[17px] cursor-pointer hover:text-[#f14f44] transition-all duration-300'/>
                 </Link>
-                <Link href={"#"}>
+                <Link href={"https://www.youtube.com/@DaMeta1"} target='_blank'>
                 <FaYoutube className='size-[18px] cursor-pointer hover:text-[#f14f44] transition-all duration-300'/>
                 </Link>
             </div>

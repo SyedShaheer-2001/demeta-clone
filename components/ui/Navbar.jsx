@@ -24,13 +24,13 @@ const Navbar = () => {
         <>
         <div className='hidden xl:flex absolute top-[10px] w-[98%] left-[1%] justify-center items-center flex-col gap-2.5  z-10'>
             <div className='w-full bg-[#111111] py-3.5 px-12 rounded-2xl flex gap-5 text-white'>
-                <Link href={"#"} >
+                <Link href={"https://www.facebook.com/DaMeta1Community"} target='_blank'>
                 <FaFacebookF className='size-[17px] cursor-pointer hover:text-[#f14f44] transition-all duration-300'/>
                 </Link>
-                <Link href={"#"}>
+                <Link href={"https://x.com/DaMeta1_"} target='_blank'>
                 <FaXTwitter className='size-[17px] cursor-pointer hover:text-[#f14f44] transition-all duration-300'/>
                 </Link>
-                <Link href={"#"}>
+                <Link href={"https://www.youtube.com/@DaMeta1"} target='_blank'>
                 <FaYoutube className='size-[18px] cursor-pointer hover:text-[#f14f44] transition-all duration-300'/>
                 </Link>
             </div>
@@ -70,13 +70,13 @@ const Navbar = () => {
      </div>
       
        <div className='w-full flex gap-5 text-white h-10'>
-                <Link href={"#"} >
+               <Link href={"https://www.facebook.com/DaMeta1Community"} target='_blank'>
                 <FaFacebookF className='size-[17px] cursor-pointer hover:text-[#f14f44] transition-all duration-300'/>
                 </Link>
-                <Link href={"#"}>
+                <Link href={"https://x.com/DaMeta1_"} target='_blank'>
                 <FaXTwitter className='size-[17px] cursor-pointer hover:text-[#f14f44] transition-all duration-300'/>
                 </Link>
-                <Link href={"#"}>
+                <Link href={"https://www.youtube.com/@DaMeta1"} target='_blank'>
                 <FaYoutube className='size-[18px] cursor-pointer hover:text-[#f14f44] transition-all duration-300'/>
                 </Link>
             </div>

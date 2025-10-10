@@ -47,13 +47,13 @@ const Footer = () => {
                             OUR SOCIAL <br /> MEDIA
                         </h1>
                         <div className="flex gap-3">
-                            <Link href={"#"} className="bg-[#7fed71] p-2.5 rounded-md">
+                            <Link href={"https://www.facebook.com/DaMeta1Community"} target='_blank' className="bg-[#7fed71] p-2.5 rounded-md">
                                 <FaFacebook className="text-black size-[28px]" />
                             </Link>
-                            <Link href={"#"} className="bg-[#7fed71] p-2.5 rounded-md">
+                            <Link href={"https://www.instagram.com/dameta1/"} target='_blank' className="bg-[#7fed71] p-2.5 rounded-md">
                                 <IoLogoInstagram className="text-black size-[28px]" />
                             </Link>
-                            <Link href={"#"} className="bg-[#7fed71] p-2.5 rounded-md">
+                            <Link href={"https://www.youtube.com/@DaMeta1"} target='_blank' className="bg-[#7fed71] p-2.5 rounded-md">
                                 <FaYoutube className="text-black size-[28px]" />
                             </Link>
                         </div>
