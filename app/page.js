@@ -21,6 +21,7 @@ import HowItWorks from "@/components/section/howItWorks";
 import AlertBox from "@/components/ui/alertbox";
 import Utility from "@/components/section/utility";
 import Utility2 from "@/components/section/utility2";
+import Block from "@/components/ui/block";
 
 
 
@@ -31,6 +32,7 @@ export default function Home() {
         <ContactBook />
         <AlertBox />
       <Hero2 />
+      <Block />
       <What />
       <div className="border-[12px] sm:border-[16px] md:border-[18px] border-[#1bd44c] flex justify-center items-center rounded-xl px-2 sm:px-4">
         <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-[1px] py-2 font-medium leading-[35px] sm:leading-[40px] md:leading-[45px] text-center">
