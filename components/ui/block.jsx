@@ -2,8 +2,6 @@
 import React, {  useEffect, useState } from 'react'
 
 const Block = () => {
-
-    // 
     
     const [data, setData] = useState([{Action: "",Message: ""}]);
     useEffect(() => {
