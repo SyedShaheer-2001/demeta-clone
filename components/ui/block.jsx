@@ -11,7 +11,7 @@ const Block = () => {
         .then((response) => response.json())
         .then((data) => setData(data));
     
-  }, [data])
+  }, [])
 
   return (
     <div>
