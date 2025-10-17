@@ -53,8 +53,9 @@ const Explore = () => {
             <div className="fluid-container flex flex-wrap justify-center gap-20 relative z-10">
                 {data.map((item, index) => {
                     return (
-                        <div key={index} data-aos={'fade-up'} className="flex flex-col gap-4 hover:bg-black/70 transition-all duration-150 ease-in-out hover:shadow-2xl shadow-[#37ff148f] p-5">
-                            <div className='h-[270px]  relative'>
+                        <div key={index} data-aos={'fade-up'} 
+                        className="flex grow max-w-[410px] flex-col gap-4 hover:bg-black/70 transition-all duration-150 ease-in-out hover:shadow-2xl shadow-[#37ff148f] p-5">
+                            <div className='h-[270px] relative'>
                              <Image src={item.imageUrl} fill  alt=''/>
                             </div>
                            <h5 className='text-[30px]'>{item.title}</h5>
