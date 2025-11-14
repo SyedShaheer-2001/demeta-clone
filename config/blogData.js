@@ -69,6 +69,24 @@ const blogData = [
             'Brand Innovation: Showcase your identity in bold, creative ways.',
             'Future-Proof Value: Early adopters of virtual property are already gaining value and recognition.',
             'Just like physical property, virtual assets can appreciate in value, especially in a growing metaverse like DaMeta2. Additionally Blockchain integration ensures secure ownership and transactions.',],
+    },
+    {
+        url: "the-rise-of-gen",
+        head: "The-rise-of-gen",
+        imgUrl: "/blogs/img1.jpg",
+        date: "March 27, 2025",
+        owner: "sami",
+        category: ['AI', 'Data Science'],
+                desc:"What if your office, classroom, or shopping mall existed in a virtual space that felt just as real and far more efficient?  Welcome to the Metaverse and more importantly, welcome to DaMeta1. DaMeta1 is a next-gen digital world which is powered…",
+        paragraphs: [
+            'Real estate is taking grand new steps by going digital.',
+            'In DaMeta1’s Business Bay, you can own, rent, or lease virtual property that serves real business needs. Want a virtual storefront? A sleep office? An event space? Business Bay lets you build a presence where global audiences already are.',
+            'Why invest in virtual real estate?',
+            'Low Overhead, High Impact: No construction delays or physical constraints.',
+            'Limitless Visibility: Your space can be visited 24/7 by users around the world.',
+            'Brand Innovation: Showcase your identity in bold, creative ways.',
+            'Future-Proof Value: Early adopters of virtual property are already gaining value and recognition.',
+            'Just like physical property, virtual assets can appreciate in value, especially in a growing metaverse like DaMeta2. Additionally Blockchain integration ensures secure ownership and transactions.',],
     }
 ]
 export default blogData;

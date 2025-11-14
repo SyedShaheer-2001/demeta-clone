@@ -9,6 +9,10 @@ const Page = () => {
     const { category } = useParams();
     const categories = blogData.filter(item => item.category.includes(category));
 
+    console.log('categories', categories)
+    console.log('category', category)
+
+
     return (
         <div className="w-full h-auto">
             <BlogHero heading={category} cat={true} />
@@ -37,14 +41,11 @@ const Page = () => {
                         <div className="px-4 sm:px-8 md:px-12 flex flex-col gap-5 sm:gap-9 pb-8 sm:pb-12">
                             <Link href={catog.url}>
                                 <h1
-                                    className="
-      exo 
-      text-lg sm:text-2xl md:text-4xl lg:text-[40px] 
-      font-medium 
-      leading-snug sm:leading-normal md:leading-[48px] lg:leading-[50px] 
-      relative group inline-block 
-      break-words max-w-full
-    "
+                                    className="exo text-lg sm:text-2xl md:text-4xl lg:text-[40px] 
+                                    font-medium 
+                                    leading-snug sm:leading-normal md:leading-[48px] lg:leading-[50px] 
+                                    relative group inline-block 
+                                    break-words max-w-full"
                                 >
                                     {catog.head}
                                     <span className="absolute left-0 -bottom-1 sm:-bottom-2 lg:-bottom-3 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
