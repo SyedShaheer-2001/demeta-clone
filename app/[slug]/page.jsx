@@ -36,7 +36,7 @@ const Page = () => {
       });
 
     // Fetch categories (ID → name)
-    axios
+   // axios
       // .get("https://dameta1.com/dameta-backend/public/api/categories")
       // .then((res) => setCategories(res.data.categories));
       setCategories(
@@ -71,13 +71,15 @@ const Page = () => {
 
   }, [slug]);
 
+  console.log('recentBlogs', recentBlogs)
+
 
 
   // Get category names using category_ids
   const getCategoryNames = (ids) => {
     return ids.map((id) => {
       const match = categories.find((c) => c.id === Number(id));
-      return match ? match.name : "";
+      return match ? match.slug : "";
     });
   };
 
@@ -222,13 +224,19 @@ const Page = () => {
             <IoShareSocialSharp />
           </div>
           <div className="w-full flex flex-col gap-5">
-            {data.map((item, i) => (
-              <Link key={i} href={item.href}>
+            {recentBlogs.map((item, i) => (
+              <Link key={i} href={item.slug}>
                 <div className="group w-full flex gap-3">
-                  <img alt="" src={item.img} className="w-20 h-20 object-cover rounded-xl" />
+                  <img alt="" src={ `https://dameta1.com/dameta-backend/public/${item.image}`} className="w-20 h-20 object-cover rounded-xl" />
                   <div>
-                    <p className="exo text-gray-500 text-sm sm:text-base">{item.date}</p>
-                    <p className="group-hover:underline exo text-base sm:text-lg font-medium">{item.desc}</p>
+                    <p className="exo text-gray-500 text-sm sm:text-base">
+                        {new Date(item.updated_at).toLocaleDateString('en-US', {
+                         month: 'long',
+                         day: 'numeric',
+                         year: 'numeric',
+                        })}
+                    </p>
+                    <p className="group-hover:underline exo text-base sm:text-lg font-medium">{item.title}</p>
                   </div>
                 </div>
               </Link>

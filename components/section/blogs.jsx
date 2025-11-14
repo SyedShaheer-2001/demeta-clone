@@ -124,7 +124,7 @@ const truncateHtml = (htmlContent, maxLength = 150) => {
             <SwiperSlide key={item.id}>
               <div className="flex flex-col gap-5 p-2">
                 <div className="w-full h-[250px] relative rounded-2xl overflow-hidden group">
-                  <Link href={`/blog/${item.slug}`}>
+                  <Link href={`/${item.slug}`}>
                     <div className="absolute w-full h-full bg-black/0 px-10 py-4 z-10 group-hover:bg-black/70 transition-all duration-300">
                       <span className="text-[20px] text-white font-sans opacity-0 group-hover:opacity-100 transition-all duration-300">
                         {getCategoryNames(item.category_ids)} 

@@ -2,23 +2,71 @@
 import BlogHero from '@/app/[slug]/components/blogHero';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import blogData from '../../../config/blogData'
+import axios from 'axios';
 
 const Page = () => {
+    const [fetchedCategories, setFetchedCategories] = useState([]);
+    const [blogs, setBlogs] = useState([]);
+    const [decoratedBlogs, setDecoratedBlogs] = useState([]);
+
     const { category } = useParams();
-    const categories = blogData.filter(item => item.category.includes(category));
 
-    console.log('categories', categories)
-    console.log('category', category)
+    // Fetch categories + blogs
+    useEffect(() => {
+        setFetchedCategories([
+            { id: 1, name: "AI", slug: "ai" },
+            { id: 2, name: "Data science", slug: "data-science" },
+            { id: 3, name: "Business", slug: "business" }
+        ]);
 
+        axios.get("https://dameta1.com/dameta-backend/public/api/blogs")
+            .then(res => setBlogs(res.data.blogs))
+            .catch(err => console.log(err));
+    }, []);
+
+    // Convert API blogs to usable structure
+    useEffect(() => {
+        if (blogs.length > 0 && fetchedCategories.length > 0) {
+
+            const converted = blogs.map(blog => {
+                const mappedCategories = blog.category_ids.map(id => {
+                    const found = fetchedCategories.find(c => c.id === Number(id));
+                    return found ? found.name : null;
+                }).filter(Boolean);
+
+                return {
+                    url: blog.slug,
+                    head: blog.title,
+                    imgUrl: `https://dameta1.com/dameta-backend/public/${blog.image}`,
+                    date: blog.created_at,
+                    owner: blog.author,
+                    category: mappedCategories,
+                    desc: blog.meta_description,
+                    paragraphs: [blog.content]
+                };
+            });
+
+            setDecoratedBlogs(converted);
+        }
+    }, [blogs, fetchedCategories]);
+
+    // Filter by route slug category
+    const filteredBlogs = decoratedBlogs.filter(item =>
+        item.category.some(
+            c => c.toLowerCase().replace(/\s+/g, "-") === category
+        )
+    );
+
+    console.log('filteredBlogs', filteredBlogs)
 
     return (
         <div className="w-full h-auto">
             <BlogHero heading={category} cat={true} />
 
             <div className="w-full flex justify-center items-center flex-col gap-10 sm:gap-14 my-20 sm:my-40 px-4">
-                {categories.map((catog, i) => (
+                {filteredBlogs.map((catog, i) => (
                     <div
                         key={i}
                         className="border rounded-2xl sm:rounded-3xl w-full sm:w-[80%] flex flex-col gap-8 sm:gap-16"
@@ -41,11 +89,14 @@ const Page = () => {
                         <div className="px-4 sm:px-8 md:px-12 flex flex-col gap-5 sm:gap-9 pb-8 sm:pb-12">
                             <Link href={catog.url}>
                                 <h1
-                                    className="exo text-lg sm:text-2xl md:text-4xl lg:text-[40px] 
-                                    font-medium 
-                                    leading-snug sm:leading-normal md:leading-[48px] lg:leading-[50px] 
-                                    relative group inline-block 
-                                    break-words max-w-full"
+                                    className="
+      exo 
+      text-lg sm:text-2xl md:text-4xl lg:text-[40px] 
+      font-medium 
+      leading-snug sm:leading-normal md:leading-[48px] lg:leading-[50px] 
+      relative group inline-block 
+      break-words max-w-full
+    "
                                 >
                                     {catog.head}
                                     <span className="absolute left-0 -bottom-1 sm:-bottom-2 lg:-bottom-3 w-0 h-[2px] bg-black transition-all duration-700 group-hover:w-full"></span>
